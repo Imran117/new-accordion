@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'fightback';
+    src: url(../fonts/fightback.ttf);
+}
+
+@font-face {
+    font-family: 'piziza';
+    src: url(../fonts/piziza-regulardemo.ttf);
+}
+
+body {
+    font-family: 'fightback';
+    background: #eaf4f4;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrapper__head {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.wrapper__head-title {
+    font-family: 'piziza';
+    font-size: 60px;
+    font-weight: 400;
+    color: #2D3142;
+}
+
+.wrapper__block {
+    border: 1px solid #BFC0C0;
+}
+
+.wrapper__block-head {
+    background: #2D3142;
+    color: #BFC0C0;
+    font-size: 32px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.wrapper__block-head:hover {
+    background: #BFC0C0;
+    color: #2D3142;
+}
+
+.wrapper__block-head img {
+    transition: 0.20s;
+}
+
+.wrapper__block-head.active img {
+    transform: rotate(90deg);
+}
+
+.wrapper__block-body {
+    background: #4F5D75;
+    font-size: 22px;
+    color: #FFFFFF;
+    max-height: 0;
+    padding: 0 30px;
+    overflow: hidden;
+    transition: 0.20s linear;
+}
+
+.wrapper__block-body.is-open {
+    max-height: 300px;
+    padding: 10px 30px;
+    transition: 0.4s linear;
+}
